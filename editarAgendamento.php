@@ -10,7 +10,10 @@ if ($_POST) {
 	//header('Location: listarProdutos.php');
 }
  ?>
+<<<<<<< HEAD
    <div style="background-image:url(img/header-bg.jpg)">
+=======
+>>>>>>> c4f52bdb0edfa7cbf453a52c5a407cbf3d4ed682
  <form class="form-control" method="post" form="forminserir" action="">
 	<input type="text" name="idAgendamento" value="<?php echo $result[0]['idAgendamento']; ?>">
 	<input type name="IDusuario" value="<?php echo $result[0]['nome_usuario']; ?>">	 

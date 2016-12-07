@@ -17,10 +17,18 @@
 		}
 		public function read($where = null)
 		{
+<<<<<<< HEAD
 
 			$sql = "SELECT * FROM agenda A JOIN usuarios B ON A.IdUsuario=B.ID_USUARIO ";
 
 	
+=======
+<<<<<<< HEAD
+			$sql = "SELECT * FROM agenda A JOIN usuarios B ON A.IdUsuario=B.ID_USUARIO ";
+=======
+			$sql = "SELECT * FROM agenda";
+>>>>>>> d2c2bdf47192c53c4611960c0c61ead64587d6a5
+>>>>>>> c4f52bdb0edfa7cbf453a52c5a407cbf3d4ed682
 
 	if (!empty($where))
 	 {
@@ -57,6 +65,14 @@
 
 		 	 $sql .= $str;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+		 	 $sql.= "WHERE idAgendamento = ?";
+=======
+		 	 $sql.= "WHERE id = ?";
+>>>>>>> d2c2bdf47192c53c4611960c0c61ead64587d6a5
+>>>>>>> c4f52bdb0edfa7cbf453a52c5a407cbf3d4ed682
 
 		 	 $sql.= "WHERE idAgendamento = ?";
 

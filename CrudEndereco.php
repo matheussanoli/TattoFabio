@@ -1,6 +1,10 @@
 <?php 
 	include_once('conexao.php');
+<<<<<<< HEAD
   <div style="background-image:url(img/header-bg.jpg)">
+=======
+
+>>>>>>> c4f52bdb0edfa7cbf453a52c5a407cbf3d4ed682
 	class Crud{
 		public function insert($usuario,$endereco,$bairro,$cidade,$uf,$cep,$fixo,$celular){
 			$sql = "INSERT INTO enderecos (id_usuario,endereco_usuario,bairro_usuario,cidade_usuario,uf_usuario,cep_usuario) values (?,?,?,?,?,?)";

@@ -4,7 +4,10 @@
 	<title></title>
 </head>
 <body>
+<<<<<<< HEAD
   <div style="background-image:url(img/header-bg.jpg)">
+=======
+>>>>>>> c4f52bdb0edfa7cbf453a52c5a407cbf3d4ed682
 	<div class="container">
 		<h1>Preencha os campos:</h1>
 		<form class="" method="post" id="forminserir" action="">

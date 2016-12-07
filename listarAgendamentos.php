@@ -2,7 +2,11 @@
 <?php
 require_once('CrudAgenda.php');
 	$Crud = new Crud();
+<<<<<<< HEAD
 	  <div style="background-image:url(img/header-bg.jpg)">
+=======
+	
+>>>>>>> c4f52bdb0edfa7cbf453a52c5a407cbf3d4ed682
 	$result = $Crud->read();
   ?><div class="container">
   <h1>Todos os procedimentos cadastrados</h1>

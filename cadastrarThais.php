@@ -16,6 +16,7 @@
               <div class="intro-text">
                   <form action="" method="post">
                   	<h2 class="wow fadeInDown"><strong><span class="color">Cadastro Usuário</span></strong></h2>
+<<<<<<< HEAD
                      <br><h4 class="wow fadeInDown"><strong>Nome:</strong>
                           <div class="form-group">
                            <input  type="text" name="nome" required="" /><br>
@@ -27,6 +28,15 @@
   		                    <br><strong>Senha:</strong>
   		                    <div class="form-group">
                             <input type="password" name="senha" required="" /></h4>
+=======
+  		                    <br><h4 class="wow fadeInDown"><strong>Email:</strong>
+  		                    <div class="form-group">
+                            <input type="email" name="usuario"/><br>
+                          </div>
+  		                    <br><strong>Senha:</strong>
+  		                    <div class="form-group">
+                            <input type="password" name="senha"/></h4>
+>>>>>>> c4f52bdb0edfa7cbf453a52c5a407cbf3d4ed682
                           </div>
   		                    <br>
   		                    <br>
@@ -43,6 +53,7 @@
   $Crud = new Crud();
 
   if($_POST!= null){
+<<<<<<< HEAD
     $nome = $_POST['nome'];
     $usuario = $_POST['usuario'];
     $senha = $_POST['senha'];
@@ -50,6 +61,12 @@
     $id=$Crud->insert($nome,$usuario,$senha);
     header('location: login.php');
 
+=======
+    $usuario = $_POST['usuario'];
+    $senha = $_POST['senha'];
+    $validacao = false;
+    $id=$Crud->insert($usuario,$senha);
+>>>>>>> c4f52bdb0edfa7cbf453a52c5a407cbf3d4ed682
   }
 ?>
 </html>
