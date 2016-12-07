@@ -1,7 +1,7 @@
 <?php 
 	include_once('conexao.php');
 
-	class Crud
+	class CrudAgenda
 	{
 		public function insert($usuario,$horario,$validacao)
 		{
@@ -17,7 +17,10 @@
 		}
 		public function read($where = null)
 		{
-			$sql = "SELECT * FROM agenda";
+
+			$sql = "SELECT * FROM agenda A JOIN usuarios B ON A.IdUsuario=B.ID_USUARIO ";
+
+	
 
 	if (!empty($where))
 	 {
@@ -54,8 +57,10 @@
 
 		 	 $sql .= $str;
 
-		 	 $sql.= "WHERE id = ?";
 
+		 	 $sql.= "WHERE idAgendamento = ?";
+
+		 
 		 	 $valores[] = $id;
 
 		 	 $query = conexao::conectar()->prepare($sql);

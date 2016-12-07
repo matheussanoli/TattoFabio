@@ -22,7 +22,7 @@
                     <br><input class="btn btn-default btn-lg page-scroll wow fadeInUp" type="submit" name="form-login" value="ENTRAR"/>
                     <input class="btn btn-default btn-lg page-scroll wow fadeInUp" type="submit"onclick="location.href='index.php'" name="form-login" value="VOLTAR"/>
                     <h4 class="wow fadeInDown"><strong><a href="">Esqueceu a senha?</a></strong></h4>
-                    <h4 class="wow fadeInDown" class="fa fa-user-plus fa-flip-horizontal" ><strong>Ainda não tem cadastro <a href="cadastrar.php">clique aqui:</a></strong></h4>
+                    <h4 class="wow fadeInDown" class="fa fa-user-plus fa-flip-horizontal" ><strong>Ainda não tem cadastro <a href="cadastrarThais.php">clique aqui:</a></strong></h4>
                     
 
                     <!--li><i class="fa fa-user-plus fa-flip-horizontal">&nbsp</i> Cadastrar</a></li-->
@@ -33,21 +33,29 @@
 </div>
 </body>
 <?php 
-  $login = $_POST['login'];
-  $entrar = $_POST['entrar'];
-  $senha = md5($_POST['senha']);
-  $connect = mysql_connect('localhost','root','123');
-  $db = mysql_select_db('Tatoo');
-    if (isset($entrar)) {
-            
-      $verifica = mysql_query("SELECT * FROM usuarios WHERE login = '$login' AND senha = '$senha'") or die("erro ao selecionar");
-        if (mysql_num_rows($verifica)<=0){
-          echo"<script language='javascript' type='text/javascript'>alert('Login e/ou senha incorretos');window.location.href='login.html';</script>";
-          die();
-        }else{
-          setcookie("login",$login);
-          header("Location:index.php");
-        }
-    }
+if ($_POST) {
+  # code...
+
+require_once('CrudUsuario.php');
+$Crud = new Crud();
+$id = $_POST['login'];
+$senha = $_POST['senha'];
+$where = 'id = '.$id;
+$result = $Crud->read($id,$senha);
+if ($result!=null) {
+  # code...
+
+foreach ($result as $r) {
+  
+  header('Location: agenda.php?id_usuario='.$r['id_usuario']);
+  }
+   }else{
+echo "Digite a senha correta";
+    
+}
+
+
+
+}
+  
 ?>
-<?php include('rodape.php') ?>

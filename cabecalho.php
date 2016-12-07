@@ -2,6 +2,7 @@
   <div id="status"> <img src="img/preloader.gif" height="64" width="64" alt=""> </div>
 </div>
 <!-- Navigation ==========================================-->
+  
 <nav id="menu" class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -17,6 +18,7 @@
         <li><a href="#works-section" class="page-scroll"><i class="fa fa-picture-o fa-flip-horizontal">&nbsp</i> Catálago</a></li>
         <li><a href="#about-section" class="page-scroll"><i class="fa fa-child fa-flip-horizontal">&nbsp</i> Tatuadores</a></li>
         <li><a href="#contact-section" class="page-scroll"><i class="fa fa-phone fa-flip-horizontal">&nbsp</i> Contato</a></li>
+       
         <li><a href="login.php" class="page-scroll"><i class="fa fa-sign-in fa-flip-horizontal">&nbsp</i> Entrar</a></li>
         
         

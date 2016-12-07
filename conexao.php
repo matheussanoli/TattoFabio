@@ -1,4 +1,5 @@
 <?php
+ 
 require_once 'config.php';
 class conexao{
 	private static $con;

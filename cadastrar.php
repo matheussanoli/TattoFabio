@@ -29,5 +29,5 @@
         </header>
   </div>
 </body>
-<?php include('rodape.php') ?>
+
 </html>
